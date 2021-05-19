@@ -41,11 +41,11 @@ Nevertheless this package has all you need to dictate your object's state throug
 Zed can be installed with the typical NPM or Yarn:
 
 ```bash
-npm install @cursorsdottsx/e
+npm install @cursorsdottsx/z
 ```
 
 ```bash
-yarn add @cursorsdottsx/e
+yarn add @cursorsdottsx/z
 ```
 
 #### Easy to use
