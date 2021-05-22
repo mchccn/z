@@ -51,11 +51,11 @@ yarn add @cursorsdottsx/z
 #### Easy to use
 
 ```js
-require("@cursorsdottsx/z");
+const Zed = require("@cursorsdottsx/z").default;
 ```
 
 ```js
-import "@cursorsdottsx/z";
+import Zed from "@cursorsdottsx/z";
 ```
 
 Yay you actually installed this! Time to use it! Zed is available as a global class:
@@ -108,9 +108,9 @@ That's right, Zed will behave differently when extended!
 
 ```js
 class VersionedObject extends Zed {
-	constructor() {
-		super(zedOptions);
-	}
+    constructor() {
+        super(zedOptions);
+    }
 }
 
 const object = new VersionedObject();
@@ -134,37 +134,41 @@ This is also inherently more type safe and goes well with TypeScript!
 
 ### `new Zed(object, options)`
 
-- `object` – The object to track.
-- `options` – Options for Zed.
-	- `master` – Name of the master branch.
-	- `message` – Repo initialization message.
+-   `object` – The object to track.
+-   `options` – Options for Zed.
+    -   `master` – Name of the master branch.
+    -   `message` – Repo initialization message.
 
 Creates a new Zed instance.
 
-### `Zed.prototype.latest` 
+### `Zed.prototype.latest`
 
 The current snapshot (badly named I know).
 
 ### `Zed.prototype.commit(message)`
-- `message` – Optional commit message.
+
+-   `message` – Optional commit message.
 
 Commits the current Zed object to the timeline.
 
 ### `Zed.prototype.revert(id)`
-- `id` – Optional snapshot id to revert to.
+
+-   `id` – Optional snapshot id to revert to.
 
 Oh shit you messed up! Reverts the timeline to the last snapshot (or the snapshot with the id provided).
 
 ### `Zed.prototype.branch(name, options)`
-- `name` – Name of the new branch.
-- `options` – Options for the new branch.
-	- `m` – Overwrite the branch that already exists.
-	- `b` – Checkout the new branch.
+
+-   `name` – Name of the new branch.
+-   `options` – Options for the new branch.
+    -   `m` – Overwrite the branch that already exists.
+    -   `b` – Checkout the new branch.
 
 Creates a new branch in the timeline.
 
 ### `Zed.prototype.checkout(name)`
-- `name` – Name of the branch.
+
+-   `name` – Name of the branch.
 
 Switches to another branch.
 
@@ -172,25 +176,27 @@ Switches to another branch.
 
 ### `new Zed.Simple(object, options)`
 
-- `object` – The object to track.
-- `options` – Options for Zed.
-	- `master` – Name of the master branch.
-	- `message` – Repo initialization message.
+-   `object` – The object to track.
+-   `options` – Options for Zed.
+    -   `master` – Name of the master branch.
+    -   `message` – Repo initialization message.
 
 Creates a new Zed instance.
 
-### `Zed.Simple.prototype.latest` 
+### `Zed.Simple.prototype.latest`
 
 The current snapshot (badly named I know).
 
 ### `Zed.Simple.prototype.commit(message)`
-- `message` – Optional commit message.
+
+-   `message` – Optional commit message.
 
 Commits the current Zed object to the timeline.
 
 ### `Zed.Simple.prototype.revert(times, force)`
-- `times` – How many times do we wanna roll' back?
-- `force` – Force rollback to earliest change if needed.
+
+-   `times` – How many times do we wanna roll' back?
+-   `force` – Force rollback to earliest change if needed.
 
 Oh shit you messed up! Reverts the timeline to the last snapshot.
 
