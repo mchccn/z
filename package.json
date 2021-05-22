@@ -1,6 +1,6 @@
 {
   "name": "@cursorsdottsx/z",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "What? What's Zed? Ctrl Zed of course. Go Ctrl + Z your objects by employing a Version Control System for your JavaScript objects.",
   "main": "index.js",
   "scripts": {
